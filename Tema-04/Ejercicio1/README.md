@@ -1,5 +1,30 @@
-# Repo para EU - DevOps&Cloud - UNIR
+Para hacer funcionar la aplicación (desde cmd):
 
-Este repositorio incluye un proyecto sencillo para demostrar los conceptos de pruebas unitarias, pruebas de servicio, uso de Wiremock y pruebas de rendimiento
-El objetivo es que el alumno entienda estos conceptos, por lo que el código y la estructura del proyecto son especialmente sencillos.
-Este proyecto sirve también como fuente de código para el pipeline de Jenkins.
+1- Establecer la variable PYTHONPATH aputando a esta carpeta:
+
+SET PYTHONPATH=.
+
+2.- Desde esta carpeta ejecutar la app:
+
+python app\calc.py
+
+3.- Componentes adicionales
+
+Componentes para la prueba:
+
+* flask: Ejecución de microservicios:
+
+SET FLASK_APP=app\api.py
+flask run
+
+* wiremock: Papra una api false
+
+java -jar "C:\Users\david\Downloads\wiremock-jre8-standalone-2.35.0.jar" -port 9090 -root-dir "C:\devel\GitHub\curso-devops\Tema-04\Ejercicio1\test\wiremock"
+
+* pytest: Para pruebas unitarias, para ejecutarlo:
+
+pytest test\unit
+pytest test\rest
+
+
+*********** minuto 1:17
