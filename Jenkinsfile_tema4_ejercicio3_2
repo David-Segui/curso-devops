@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages {
+        stage('Saludar') {
+            steps {
+                bat 'echo "Hola rama devel"'
+            }
+        }
+    }
+}
