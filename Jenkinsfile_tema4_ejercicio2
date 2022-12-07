@@ -1,0 +1,31 @@
+// Pipeline multiagente
+// Definicion de una funcion
+def comentario (cm) {
+   if (isUnix()) {
+     sh 'ls -la'
+   } else {
+     bat 'dir'
+   }
+} 
+
+// Pipeline
+pipeline {
+    agent none
+    stages {
+        stage('Primera etapa Windows') {
+            agent { label 'windev' } //Elegimos el agente con la etiqueta windev
+            steps {
+                //echo 'Hello World'
+                comentario 'hola mundo' // Función definida anteriormente 
+            }
+        }
+        stage('Segunda etapa Linux') {
+            agent { label 'linuxdev' } //Elegimos el agente con la etiqueta windev
+            steps {
+                //echo 'Hello World'
+                comentario 'hola mundo Linux' // Función definida anteriormente 
+                sh 'touch pepe'
+            }
+        }
+    }
+}

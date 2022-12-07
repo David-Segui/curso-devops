@@ -1,3 +1,4 @@
+# trigger Consulta cada 5 min
 # pylint: disable=no-else-return
 def convert_to_number(operand):
     try:
