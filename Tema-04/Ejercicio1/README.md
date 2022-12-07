@@ -25,6 +25,3 @@ java -jar "C:\Users\david\Downloads\wiremock-jre8-standalone-2.35.0.jar" -port 9
 
 pytest test\unit
 pytest test\rest
-
-
-*********** minuto 1:17
